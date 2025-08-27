@@ -38,12 +38,10 @@ const Sidebar = () => {
             <SidebarChannel />
           </div>
           <div className='sidebarSettings'>
-            <div className='sidebarAccount'>
+            <div className='accountName'>
               <img src='./icon.png' alt=''></img>
-              <div className='accountName'>
-                <h4>ShinCode</h4>
-                <span>#8162</span>
-              </div>
+              <h4>ShinCode</h4>
+              <span>#8162</span>
             </div>
             <div className='sidebarVoice'>
               <MicIcon />
