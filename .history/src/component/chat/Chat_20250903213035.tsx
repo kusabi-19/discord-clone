@@ -1,0 +1,30 @@
+import React, { Component } from 'react'
+import "./Chat.scss" 
+import ChatHeader from './ChatHeader'
+import { AddCircleOutline, CardGiftcard, EmojiEmotions, Gif } from '@mui/icons-material'
+
+const Chat = () => {
+  return (
+    <div className='chat'>
+      <ChatHeader />
+      <div className="chatInput">
+        <AddCircleOutline/>
+        <form>
+          <input type='text' placeholder='testへメッセージ送信'/>
+          <button type='submit' className='chatInputButton'>
+            送信
+          </button>
+          <div className='chatInputIcon'>
+            <CardGiftcard />
+            <Gif />
+            <EmojiEmotions/>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default Chat

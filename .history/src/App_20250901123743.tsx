@@ -2,9 +2,11 @@ import { useState } from 'react'
 import 'destyle.css';
 import './App.scss'
 import Sidebar from './component/sidebar/Sidebar'
-import Chat from './component/chat/Chat';
+import { Chat } from '@mui/icons-material'
 
-const App = () => {
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
       <div className='app'>
@@ -16,4 +18,3 @@ const App = () => {
 }
 
 export default App
-

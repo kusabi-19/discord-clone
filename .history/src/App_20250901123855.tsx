@@ -4,7 +4,9 @@ import './App.scss'
 import Sidebar from './component/sidebar/Sidebar'
 import Chat from './component/chat/Chat';
 
-const App = () => {
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
       <div className='app'>
@@ -16,4 +18,3 @@ const App = () => {
 }
 
 export default App
-
