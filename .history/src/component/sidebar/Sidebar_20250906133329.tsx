@@ -17,8 +17,13 @@ const Sidebar = () => {
   useEffect( () => {
     onSnapshot(q, (querySnapshot) => {
       const channelsResults = [];
-      querySnapshot.docs.forEach((doc) => console.log(doc))
+      querySnapshot.docs.forEach((doc) => colsole.log(doc))
+
       });
+      console.log("Current cities in CA: ", cities.join(", "));
+});
+
+
   } ,[])
   return (
     <div className='sidebar'>

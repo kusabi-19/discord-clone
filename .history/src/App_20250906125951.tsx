@@ -12,24 +12,24 @@ import { login, logout } from './features/userSlise';
 
 const App = () => {
   const user = useAppSelector ( (state => state.user));
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-    auth.onAuthStateChanged((loginUser) => {
-      console.log(loginUser);
-      if(loginUser) {
-        dispatch(
-          login({
-            uid: loginUser.uid,
-            photo: loginUser.photoURL,
-            email: loginUser.email,
-            displayName: loginUser.displayName,
-          })
-        );
-      } else {
-        dispatch(logout());
-      }
-    });
-  },[dispatch]);
+  // const dispatch = useAppDispatch()
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((loginUser) => {
+  //     console.log(loginUser);
+  //     if(loginUser) {
+  //       dispatch(
+  //         login({
+  //           uid: loginUser.uid,
+  //           photo: loginUser.photoURL,
+  //           email: loginUser.email,
+  //           displayName: loginUser.displayName,
+  //         })
+  //       );
+  //     } else {
+  //       dispatch(logout());
+  //     }
+  //   });
+  // },[dispatch]);
   return (
     <>
       <div className='app'>

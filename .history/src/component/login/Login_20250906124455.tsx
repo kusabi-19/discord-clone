@@ -1,0 +1,24 @@
+import React from 'react'
+import "./Login.scss" 
+import { Button } from '@mui/material'
+import { signInWithPopup} from 'firebase/auth'
+import {auth} from "../../firebase/auth"
+
+const Login = () => {
+  const signIn = () => {
+    signInWithPopup(auth)
+  }
+  return (
+ <div className="login">
+      {/* <h2>ログインページです。</h2> */}
+
+      <div className="loginLogo">
+        <img src="./public/discordlogin.png" alt="" />
+      </div>
+
+      <Button onClick={signIn}>ログイン</Button>
+    </div>
+  )
+}
+
+export default Login

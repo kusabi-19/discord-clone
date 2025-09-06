@@ -7,29 +7,28 @@ import { useSelector } from 'react-redux';
 import Login from './component/login/Login';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { auth } from './firebase';
-import { login, logout } from './features/userSlise';
+import { login } from './features/userSlise';
 
 
 const App = () => {
   const user = useAppSelector ( (state => state.user));
   const dispatch = useAppDispatch()
-  useEffect(() => {
+  useEffect(() => 
     auth.onAuthStateChanged((loginUser) => {
       console.log(loginUser);
       if(loginUser) {
-        dispatch(
-          login({
+        dispatch(login(
+          {
             uid: loginUser.uid,
             photo: loginUser.photoURL,
             email: loginUser.email,
             displayName: loginUser.displayName,
-          })
-        );
-      } else {
-        dispatch(logout());
+          }
+        ));
       }
-    });
-  },[dispatch]);
+    }
+ )
+  )
   return (
     <>
       <div className='app'>

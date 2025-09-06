@@ -18,7 +18,12 @@ const Sidebar = () => {
     onSnapshot(q, (querySnapshot) => {
       const channelsResults = [];
       querySnapshot.docs.forEach((doc) => console.log(doc))
+
       });
+      console.log("Current cities in CA: ", cities.join(", "));
+});
+
+
   } ,[])
   return (
     <div className='sidebar'>

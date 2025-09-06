@@ -17,19 +17,22 @@ const App = () => {
     auth.onAuthStateChanged((loginUser) => {
       console.log(loginUser);
       if(loginUser) {
-        dispatch(
-          login({
+        dispatch(login(
+          {
             uid: loginUser.uid,
             photo: loginUser.photoURL,
             email: loginUser.email,
             displayName: loginUser.displayName,
-          })
-        );
+          }
+        ));
       } else {
         dispatch(logout());
       }
-    });
-  },[dispatch]);
+    }
+ )
+  }
+
+  )
   return (
     <>
       <div className='app'>
