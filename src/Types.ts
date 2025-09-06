@@ -6,3 +6,8 @@ export interface InitalUserStatre {
     displayName : string,
   }
 }
+
+export interface InitalChannelStatre {
+  channelId : string | null;
+  channelName : string | null;
+}
